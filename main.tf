@@ -25,7 +25,7 @@ resource "azurerm_linux_web_app" "lwa" {
   service_plan_id     = azurerm_service_plan.sp.id
   app_settings = {
       WEBSITES_ENABLE_APP_SERVICE_STORAGE = true
-      DOCKER_ENABLE_CI = true
+      DOCKER_ENABLE_CI = false
       DOCKER_REGISTRY_SERVER_URL = "https://index.docker.io/v1"
   } 
   site_config {
